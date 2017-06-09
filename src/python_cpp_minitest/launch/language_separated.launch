@@ -1,0 +1,9 @@
+<launch>
+  <!-- cpp nodes are communicating, so are python nodes -->
+  <node name="cpp_radio" pkg="python_cpp_minitest" type="cpp_sender" />
+  <node name="cpp_listener" pkg="python_cpp_minitest" type="cpp_receiver" />
+
+  <!-- do not forget .py for python nodes -->
+  <node name="python_radio" pkg="python_cpp_minitest" type="py_sender.py" />
+  <node name="python_listener" pkg="python_cpp_minitest" type="py_receiver.py" />
+</launch>

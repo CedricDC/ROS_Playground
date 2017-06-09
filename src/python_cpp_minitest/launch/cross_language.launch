@@ -1,0 +1,14 @@
+<launch>
+  <!-- do not forget .py for python nodes -->
+
+  <node name="cpp_radio" pkg="python_cpp_minitest" type="cpp_sender"/>
+  <node name="python_listener" pkg="python_cpp_minitest" type="py_receiver.py" output="screen">
+    <remap from="py_number" to="cpp_number" />
+  </node>
+
+  <node name="python_radio" pkg="python_cpp_minitest" type="py_sender.py" />
+  <node name="cpp_listener" pkg="python_cpp_minitest" type="cpp_receiver" output="screen">
+    <remap from="cpp_number" to="py_number" />
+  </node>
+
+</launch>

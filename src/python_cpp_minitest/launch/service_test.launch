@@ -1,0 +1,8 @@
+<launch>
+  <!-- Have radio publish random values, compare via service with client ones -->
+  <node name="cpp_radio" pkg="python_cpp_minitest" type="cpp_sender"/>
+
+  <node name="comparison_client" pkg="python_cpp_minitest" type="cpp_service_client" output="screen"/>
+
+  <node name="comparison_server" pkg="python_cpp_minitest" type="cpp_service_server" output="screen"/>
+</launch>
