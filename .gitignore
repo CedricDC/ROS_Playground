@@ -1,0 +1,12 @@
+# catkin related files
+build/
+devel/
+logs/
+.catkin_tools/
+.catkin_workspace
+
+# eclipse files
+.cproject
+.project
+
+.settings
